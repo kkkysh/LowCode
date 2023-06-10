@@ -1,0 +1,22 @@
+{
+  "name": "lowcode",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "deepcopy": "^2.1.0",
+    "element-plus": "^2.3.6",
+    "mitt": "^3.0.0",
+    "vue": "^3.3.2",
+    "vue-router": "^4.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "vite": "^4.3.5"
+  }
+}

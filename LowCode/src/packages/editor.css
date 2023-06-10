@@ -1,0 +1,209 @@
+.editor {
+    width: 100%;
+    height: 100%;
+}
+
+.editor-left {
+    position: absolute;
+    width: 270px;
+    background-color: #fafafa;
+    border: solid #ccc;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.editor-right {
+    position: absolute;
+    width: 270px;
+    background-color: #fafafa;
+    border: solid #ccc;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.editor-top {
+    position: absolute;
+    right: 280px;
+    left: 280px;
+    height: 80px;
+    background-color: #fafafa;
+    border: solid #ccc;
+    display: flex;
+    align-items: center;
+}
+
+.editor-top-button {
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+}
+
+.editor-container {
+    padding: 80px 270px 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.editor-container-canvas {
+    height: 100%;
+    overflow: scroll;
+}
+
+.editor-container-canvas-content {
+   margin: 20px auto;
+   background-color: white;
+   border: solid #ccc;
+   position: relative;
+}
+
+.editor-block {
+    position: absolute;
+}
+
+.editor-block::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.editor-block-focus::after {
+    border: 1px dashed red;
+}
+
+.editor-block-preview::after {
+    display: none;
+}
+
+.editor-left-item {
+    background: #fafafa;
+    width: 250px;
+    height: 100px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: solid #fafafa;
+    cursor: move;
+    user-select: none;
+    /*设置内部元素居中*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.editor-left-item > span {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 禁止点击输入 */
+.editor-left-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ccc;
+    opacity: 0.2;
+}
+
+.line-x {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-left: 1px dashed red;
+}
+
+.line-y {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: 1px dashed red;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background: #fff;
+    box-shadow: 2px 2px #ccc;
+}
+
+.dropdown-isShow {
+    display: block;
+}
+
+.dropdown-item {
+    line-height: 30px;
+    width: 100px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.range {
+    display: inline-flex;
+    width: 220px;
+    min-height: 30px;
+    align-items: center;
+}
+
+.range-input {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.block-resize {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: blue;
+    z-index: 1000;
+}
+
+.block-resize-left {
+    top: calc(50% - 4px);
+    left: -4px;
+}
+
+.block-resize-right {
+    top: calc(50% - 4px);
+    right: -4px;
+}
+
+.block-resize-top {
+    top: -4px;
+    left: calc(50% - 4px);
+}
+
+.block-resize-bottom {
+    bottom: -4px;
+    left: calc(50% - 4px);
+}
+
+.block-resize-top-left {
+    top: -4px;
+    left: -4px;
+}
+
+.block-resize-bottom-left {
+    bottom: -4px;
+    left: -4px;
+}
+
+.block-resize-top-right {
+    top: -4px;
+    right: -4px;
+}
+
+.block-resize-bottom-right {
+    bottom: -4px;
+    right: -4px;
+}
